@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url("/images/bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%);
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 90vh;
+    margin: 0rem 4rem;
+    align-items: center;
+    justify-items: center;
+    column-gap: 2rem;
+}
+
+.textLeft{
+    color: #fff;
+    padding: 0rem 8rem;
+}
+.textLeft h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+ 
+
+/* FORM STYLE ================================= */
+.formStyle{
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.formStyle input{
+    margin-top: .8rem;
+    width: 95%;
+    height: 2rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding-left: .8rem;
+    border: 1px solid black;
+}
+.form-control{
+    position: relative;
+    padding-bottom: 20px;
+}
+/* FORM SUCESS E ERROR ==================== */
+.sucess input{
+    border-color: #2ecc71;
+}
+
+.error input{
+    border-color: #e74c3c;
+}
+
+.form-control i{
+    position: absolute;
+    top:35%;
+    right: 10px;
+    visibility: hidden
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.sucess i.fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle, .form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* BUTTON ============== */
+.btnTop{
+    width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    box-shadow: hsla(0, 0%, 0%, 0.26) 0px 3px;
+    padding: 0.7rem;
+    background-color: hsl(248, 32%, 49%);
+    color: #fff;
+}
+.btnTop span{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.btnBottom{
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 3px hsla(0, 0%, 0%, 0.26);
+    background-color: hsl(154, 59%, 51%);
+    font-weight: 600;
+    color: #fff;
+    font-weight: 700;
+    padding: .7rem;
+}
+
+.btnTop:active, .btnBottom:active{
+    box-shadow: 0px 3px hsla(0, 0%, 0%, 0.26);
+    transform: translateY(4px);
+}
+
+.textFoot{
+    margin-top: 0.9rem;
+    font-size: 0.5rem;
+}
+.textFoot span{
+    color: red;
+}
+
+@media (max-width: 375px){
+    body{
+        background-image: url("/images/bg-intro-mobile.png")
+    }
+    .gridContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0rem 1rem;
+        column-gap: 0rem;
+    }
+    .textLeft{
+        color: #fff;
+        padding: 0rem 2rem;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+    .textLeft h1{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .formStyle{
+        background-color: #fff;
+        border-radius: 0.5rem;
+        padding: .5rem;
+        width: 95%;
+    }
+    
+    .formStyle input{
+        margin-top: .8rem;
+        width: 95%;
+        height: 2rem;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        padding-left: .8rem;
+        border: 1px solid black;
+    }
+    .btnTop{
+        width: 100%;
+        border-radius: .5rem;
+        margin-bottom: .5rem;
+        box-shadow: hsla(0, 0%, 0%, 0.26) 0px 3px;
+        padding: 0.7rem;
+        background-color: hsl(248, 32%, 49%);
+        color: #fff;
+    }
+}
